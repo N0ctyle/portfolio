@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mon Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Barre de navigation -->
   <nav>
-    <div class="logo">Noctyle
-    </div>
+    <div class="logo">Noctyle</div>
     <ul class="liens-nav">
       <li><a href="#a-propos">À propos</a></li>
+      <li><a href="#competences">Compétences</a></li>
       <li><a href="#projets">Projets</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -21,6 +23,7 @@
 
   <!-- Section Hero -->
   <section class="hero">
+    <img src="images/avatar.png" alt="Avatar Noctyle" class="avatar">
     <h1>Bonjour, je suis Noctyle</h1>
     <p>Développeur web en apprentissage, créateur de sites avec l'aide de l'IA</p>
   </section>
@@ -29,6 +32,29 @@
   <section class="a-propos" id="a-propos">
     <h2>À propos</h2>
     <p>Je suis en apprentissage actif du développement web, en utilisant l'IA comme un véritable outil pédagogique pour comprendre le code en profondeur, pas juste pour générer des résultats tout faits. Mon objectif est de créer des sites de qualité pour des particuliers et des entreprises.</p>
+  </section>
+
+  <!-- Section Compétences -->
+  <section class="competences" id="competences">
+    <h2>Compétences</h2>
+    <div class="grille-competences">
+      <div class="carte-competence">
+        <h3>HTML</h3>
+        <p>Structure et sémantique des pages web</p>
+      </div>
+      <div class="carte-competence">
+        <h3>CSS</h3>
+        <p>Mise en page, responsive design, animations</p>
+      </div>
+      <div class="carte-competence">
+        <h3>JavaScript</h3>
+        <p>Interactivité de base (menus, événements)</p>
+      </div>
+      <div class="carte-competence">
+        <h3>Git / GitHub</h3>
+        <p>Suivi de version, publication de sites</p>
+      </div>
+    </div>
   </section>
 
   <!-- Section Projets -->
@@ -44,7 +70,7 @@
       </div>
     </div>
 
-        <div class="carte-projet">
+    <div class="carte-projet">
       <h3>Chez Noctyle</h3>
       <p>Site multi-pages pour un restaurant. Typographie soignée, animations, menu mobile en JavaScript.</p>
       <div class="liens-projet">
@@ -58,7 +84,7 @@
   <section class="contact" id="contact">
     <h2>Me contacter</h2>
     <p>Email : contact.brocker@gmail.com</p>
-    <p><a href="https://github.com" target="_blank">Voir mon GitHub</a></p>
+    <p><a href="https://github.com/N0ctyle" target="_blank">Voir mon GitHub</a></p>
   </section>
 
   <!-- Footer -->
