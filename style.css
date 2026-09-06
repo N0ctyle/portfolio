@@ -1,0 +1,134 @@
+/* Style général */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0a0a0f;
+  color: #f2f2f2;
+}
+
+/* Barre de navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #14141c;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #8b5cf6;
+}
+
+.liens-nav {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.liens-nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.liens-nav a:hover {
+  color: #8b5cf6;
+}
+
+/* Section Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin-top: 10px;
+}
+
+/* Section À propos */
+.a-propos {
+  padding: 60px 40px;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.a-propos h2 {
+  color: #8b5cf6;
+}
+
+/* Section Projets */
+.projets {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.carte-projet {
+  display: inline-block;
+  width: 300px;
+  padding: 25px;
+  background-color: #14141c;
+  border-radius: 8px;
+  border: 1px solid #2a2a35;
+  vertical-align: top;
+  text-align: left;
+}
+
+.carte-projet h3 {
+  color: #8b5cf6;
+  margin-top: 0;
+}
+
+.liens-projet {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.liens-projet a {
+  color: #f2f2f2;
+  text-decoration: none;
+  border: 1px solid #8b5cf6;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.liens-projet a:hover {
+  background-color: #8b5cf6;
+}
+
+/* Section Contact */
+.contact {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.contact a {
+  color: #8b5cf6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #14141c;
+  color: #888888;
+  font-size: 0.9rem;
+}
