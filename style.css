@@ -1,4 +1,8 @@
 /* Style général */
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,10 +12,23 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #0a0a0f;
   color: #f2f2f2;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Barre de progression de lecture */
+.barre-progression {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #8b5cf6;
+  z-index: 200;
+  transition: width 0.1s ease;
 }
 
 /* Barre de navigation */
@@ -30,6 +47,7 @@ nav {
   font-weight: bold;
   font-size: 1.3rem;
   color: #8b5cf6;
+  letter-spacing: 0.5px;
 }
 
 .menu-burger {
@@ -52,7 +70,7 @@ nav {
 .liens-nav a {
   color: #f2f2f2;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .liens-nav a:hover {
@@ -67,6 +85,11 @@ nav {
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.25), transparent 60%);
+  background-attachment: fixed;
+  padding: 0 20px;
 }
 
 .avatar {
@@ -80,17 +103,20 @@ nav {
 .hero h1 {
   font-size: 2.8rem;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .hero p {
   font-size: 1.1rem;
   color: #b0b0b0;
-  margin-top: 10px;
+  margin-top: 15px;
+  max-width: 500px;
+  line-height: 1.7;
 }
 
 /* Section À propos */
 .a-propos {
-  padding: 60px 40px;
+  padding: 100px 40px;
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
@@ -98,33 +124,43 @@ nav {
 
 .a-propos h2 {
   color: #8b5cf6;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.a-propos p {
+  line-height: 1.8;
+  color: #cccccc;
 }
 
 /* Section Compétences */
 .competences {
-  padding: 60px 40px;
+  padding: 100px 40px;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .competences h2 {
   color: #8b5cf6;
-  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
 }
 
 .grille-competences {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .carte-competence {
   background-color: #14141c;
   border: 1px solid #2a2a35;
   border-radius: 8px;
-  padding: 20px 25px;
+  padding: 25px 30px;
   width: 200px;
-  transition: transform 0.2s ease, border-color 0.3s ease;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .carte-competence:hover {
@@ -134,19 +170,27 @@ nav {
 
 .carte-competence h3 {
   color: #8b5cf6;
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
 }
 
 .carte-competence p {
   font-size: 0.9rem;
   color: #b0b0b0;
   margin: 0;
+  line-height: 1.5;
 }
 
 /* Section Projets */
 .projets {
-  padding: 60px 40px;
+  padding: 100px 40px;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.projets h2 {
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
 }
 
 .carte-projet {
@@ -158,7 +202,8 @@ nav {
   border: 1px solid #2a2a35;
   vertical-align: top;
   text-align: left;
-  transition: transform 0.2s ease, border-color 0.3s ease;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 10px;
 }
 
 .carte-projet:hover {
@@ -169,6 +214,11 @@ nav {
 .carte-projet h3 {
   color: #8b5cf6;
   margin-top: 0;
+}
+
+.carte-projet p {
+  line-height: 1.6;
+  color: #cccccc;
 }
 
 .liens-projet {
@@ -184,6 +234,7 @@ nav {
   padding: 6px 14px;
   border-radius: 4px;
   font-size: 0.9rem;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .liens-projet a:hover {
@@ -192,8 +243,20 @@ nav {
 
 /* Section Contact */
 .contact {
-  padding: 60px 40px;
+  padding: 100px 40px;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
+}
+
+.contact h2 {
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  color: #cccccc;
+  line-height: 1.7;
 }
 
 .contact a {
@@ -203,7 +266,7 @@ nav {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #14141c;
   color: #888888;
   font-size: 0.9rem;
@@ -240,6 +303,10 @@ footer {
     font-size: 1rem;
   }
 
+  .a-propos, .competences, .projets, .contact {
+    padding: 70px 25px;
+  }
+
   .carte-competence {
     width: 90%;
     margin: 0 auto;
@@ -256,7 +323,7 @@ footer {
 .reveal {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .reveal.visible {
@@ -279,7 +346,7 @@ footer {
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
   z-index: 100;
 }
 

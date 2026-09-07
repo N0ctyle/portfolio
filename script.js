@@ -35,3 +35,21 @@ const liensNav = document.getElementById('liens-nav');
 boutonBurger.addEventListener('click', function() {
   liensNav.classList.toggle('actif');
 });
+
+// Fermer le menu automatiquement après avoir cliqué sur un lien
+const liensDuMenu = document.querySelectorAll('.liens-nav a');
+
+liensDuMenu.forEach(function(lien) {
+  lien.addEventListener('click', function() {
+    liensNav.classList.remove('actif');
+  });
+});
+
+// Barre de progression de lecture
+const barreProgression = document.getElementById('barre-progression');
+
+window.addEventListener('scroll', function() {
+  const hauteurTotale = document.body.scrollHeight - window.innerHeight;
+  const pourcentage = (window.scrollY / hauteurTotale) * 100;
+  barreProgression.style.width = pourcentage + '%';
+});
