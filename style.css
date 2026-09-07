@@ -32,6 +32,15 @@ nav {
   color: #8b5cf6;
 }
 
+.menu-burger {
+  display: none;
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .liens-nav {
   list-style: none;
   display: flex;
@@ -202,16 +211,25 @@ footer {
 
 /* Adaptations pour mobile/tablette */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
+  .menu-burger {
+    display: block;
   }
 
   .liens-nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #14141c;
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
     gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .liens-nav.actif {
+    display: flex;
   }
 
   .hero h1 {
