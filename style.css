@@ -61,6 +61,8 @@ nav {
   font-size: 1.3rem;
   color: var(--couleur-accent);
   letter-spacing: 0.5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .menu-burger {
@@ -121,6 +123,24 @@ nav {
   margin-top: 15px;
   max-width: 500px;
   line-height: 1.7;
+}
+
+.bouton-cta {
+  margin-top: 30px;
+  padding: 14px 36px;
+  background-color: var(--couleur-accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.bouton-cta:hover {
+  transform: scale(1.05);
+  background-color: var(--couleur-accent-clair);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
 }
 
 /* Section À propos */
@@ -357,7 +377,7 @@ footer {
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, box-shadow 0.3s ease;
   z-index: 100;
 }
 
