@@ -1,4 +1,3 @@
-// On récupère toutes les sections qui ont la classe "reveal"
 const sections = document.querySelectorAll('.reveal');
 
 const observateur = new IntersectionObserver(function(entrees) {
@@ -13,7 +12,6 @@ sections.forEach(function(section) {
   observateur.observe(section);
 });
 
-// Bouton retour en haut
 const boutonHaut = document.getElementById('retour-haut');
 
 window.addEventListener('scroll', function() {
@@ -28,7 +26,6 @@ boutonHaut.addEventListener('click', function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Menu burger mobile
 const boutonBurger = document.getElementById('menu-burger');
 const liensNav = document.getElementById('liens-nav');
 
@@ -36,7 +33,6 @@ boutonBurger.addEventListener('click', function() {
   liensNav.classList.toggle('actif');
 });
 
-// Fermer le menu automatiquement après avoir cliqué sur un lien
 const liensDuMenu = document.querySelectorAll('.liens-nav a');
 
 liensDuMenu.forEach(function(lien) {
@@ -45,7 +41,6 @@ liensDuMenu.forEach(function(lien) {
   });
 });
 
-// Barre de progression de lecture
 const barreProgression = document.getElementById('barre-progression');
 
 window.addEventListener('scroll', function() {
